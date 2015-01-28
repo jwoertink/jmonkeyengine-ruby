@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jeremywoertink@gmail.com"]
   spec.summary       = %q{Easily include the JME jar in your project}
   spec.description   = %q{read the README}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jwoertink/jmonkeyengine-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
