@@ -1,6 +1,6 @@
 # JMonkeyEngine
 
-This gem will just include the latest stable build source of jMonkeyEngine. That way your project won't need to include it because it's huge, and doing a `git push` with over 80mb of jar files takes a while when sitting at the airport.
+This gem will just include the [latest stable build](http://updates.jmonkeyengine.org/stable/3.0/engine/) source of jMonkeyEngine. That way your project won't need to include it because it's huge, and doing a `git push` with over 80mb of jar files takes a while when sitting at the airport.
 
 ## Installation
 
