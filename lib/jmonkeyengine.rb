@@ -1,5 +1,2 @@
 require "jmonkeyengine/version"
-
-module JMonkeyEngine
-  # Your code goes here...
-end
+require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'vendor', "jme3_#{JMonkeyEngine::JAR_VERSION}.jar")
