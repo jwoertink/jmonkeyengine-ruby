@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jeremy Woertink"]
   spec.email         = ["jeremywoertink@gmail.com"]
   spec.summary       = %q{Easily include the JME jar in your project}
-  spec.description   = %q{read the README}
+  spec.description   = %Q{Easily include JME#{JMonkeyEngine::JME_VERSION} into your project.}
   spec.homepage      = "https://github.com/jwoertink/jmonkeyengine-ruby"
   spec.license       = "MIT"
 
