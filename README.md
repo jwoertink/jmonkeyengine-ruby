@@ -23,6 +23,24 @@ Or install it yourself as:
 1. Install the gem
 2. View some [jruby examples](https://github.com/jwoertink/waves) or the [hello world tutorial](http://wiki.jmonkeyengine.org/doku.php/jme3#tutorials_for_beginners)
 
+Basic usage (for now)
+
+```ruby
+java_import "com.jme3.system.AppSettings"
+
+MyGame.settings = AppSettings.new(true)
+
+java_import "com.jme3.math.ColorRGBA"
+view_port.background_color = ColorRGBA.new(ColorRGBA.random_color)
+```
+
+## TODO
+* Add aliases to help aide ruby style programming for methods like `SimpleApplication#simpleInitApp`
+* Add Ruby module namespaces with group requires like `require "jmonkeyengine/scene"` for `Node`, `Spatial`, `Geometry`, etc...
+* Also adding individual requires so your code has `require` instead of `java_import` all over the place.
+* Possibly add some sort of `rake scaffold` type task to generate a basic folder structure for starting a game.
+* Add development rake task to check jmonkeyengine site for latest stable build and unpack
+
 
 ## Contributing
 
