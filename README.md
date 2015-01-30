@@ -26,10 +26,17 @@ Or install it yourself as:
 Basic usage (for now)
 
 ```ruby
+require 'jmonkeyengine'
+
+# Load JME AppSettings for setting things like resolution, fullscreen, and title
 java_import "com.jme3.system.AppSettings"
+app_settings = AppSettings.new(true)
+app_settings.title = "My game"
+app_settings.fullscreen = true
+app_settings.set_resolution(1024, 768) #old school resolution
+MyGame.settings = app_settings
 
-MyGame.settings = AppSettings.new(true)
-
+# Add in some colors
 java_import "com.jme3.math.ColorRGBA"
 view_port.background_color = ColorRGBA.new(ColorRGBA.random_color)
 ```
@@ -41,6 +48,24 @@ view_port.background_color = ColorRGBA.new(ColorRGBA.random_color)
 * Possibly add some sort of `rake scaffold` type task to generate a basic folder structure for starting a game.
 * Add development rake task to check jmonkeyengine site for latest stable build and unpack
 
+
+## Future Possible API
+
+```ruby
+# Just include all 450,000 classes... Probably not a good idea?
+require 'jmonkeyengine/all'
+
+# Require all classes scoped to com.jme3.bullet.*
+require 'jmonkeyengine/bullet'
+JMonkeyEngine::BulletAppState
+# Should this be...
+JMonkeyEngine::CapsuleCollisionShape || JMonkeyEngine::Collision::Shapes::CapsuleCollisionShape
+# I like the first way because it's shorter, but not sure if that will conflict with other classes.
+
+# SimpleApplication that should boot a default blank window
+require 'jmonkeyengine/app/simple_application'
+SimpleApplication.new.start
+```
 
 ## Contributing
 
